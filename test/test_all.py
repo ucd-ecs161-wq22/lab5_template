@@ -4,6 +4,7 @@ import src.Instructor as Instructor
 import src.Student as Student
 import unittest
 
+
 class TestAdmin(unittest.TestCase):
 
     def setUp(self):
@@ -65,7 +66,6 @@ class TestAdmin(unittest.TestCase):
         pass
 
 
-
 class TestHomework(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -89,7 +89,6 @@ class TestHomework(unittest.TestCase):
         Use functions in DataManager, Student, Instructor, Admin, etc, as needed
         """
         pass
-
 
 
 class TestInstructor(unittest.TestCase):
@@ -133,6 +132,17 @@ class TestInstructor(unittest.TestCase):
 
         pass
 
+    def test_assign_grade(self):
+        """Lab 5
+            # 1. create a class        
+            # 2. Getting the course information
+            # 3. Add a student
+            # 4. Add homework
+            # 5. Grade the student's homework for that course
+            # 6. Retreive the grade
+            # 7. Assert that the given grade matches the retreived grade            
+        """
+        pass
 
 
 class TestStudent(unittest.TestCase):
@@ -160,6 +170,12 @@ class TestStudent(unittest.TestCase):
         For this test, a) Create a class, b) add a homework, c) add a student
         d) student submits the homework e) now check that teh student has indeed
         submitted the homework. 
+        """
+        pass
+
+    def test_register_for_class(self):
+        """lab5
+        Mo's demo
         """
         pass
 
