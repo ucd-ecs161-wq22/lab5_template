@@ -174,10 +174,20 @@ class TestStudent(unittest.TestCase):
         pass
 
     def test_register_for_class(self):
-        """lab5
-        Mo's demo
-        """
-        pass
+        instructor_name = "mo"
+        student_name = "foo"
+        course_name = "ecs161"
+        course_year = 2022
+        course_capacity = 100
+        # 1. Create a class
+        Admin.createClass(course_name, course_year, instructor_name, course_capacity)
+        # 2. Get the course object from the data manager
+        course = DataManager.findCourse(course_name, course_year)
+        # 3. Add the student to the class
+        course.addStudent(student_name)
+        Student.registerForClass(student_name,course_name, course_year)
+        # 4. Assert that the student is registed for the course
+        self.assertTrue(Student.isRegisteredFor(student_name, course_name, course_year))
 
 
 if __name__ == "__main__":
